@@ -1,0 +1,48 @@
+[gd_scene load_steps=4 format=3 uid="uid://dvo53wr5klck5"]
+
+[ext_resource type="Script" uid="uid://dj5pwpwpvqkgj" path="res://pause_menu.gd" id="1_nwcfo"]
+[ext_resource type="Shader" uid="uid://ddath2el1smtm" path="res://shader.gdshader" id="2_05uyy"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_p81d2"]
+shader = ExtResource("2_05uyy")
+shader_parameter/lod = 1.0
+
+[node name="PauseMenu" type="Control"]
+process_mode = 3
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_nwcfo")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+material = SubResource("ShaderMaterial_p81d2")
+layout_mode = 0
+offset_right = 1152.0
+offset_bottom = 648.0
+
+[node name="PanelContainer" type="PanelContainer" parent="."]
+layout_mode = 0
+offset_left = 350.0
+offset_top = 100.0
+offset_right = 850.0
+offset_bottom = 600.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer"]
+layout_mode = 2
+size_flags_horizontal = 5
+size_flags_vertical = 4
+
+[node name="Continue" type="Button" parent="PanelContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+text = "CONTINUE"
+
+[node name="Quit" type="Button" parent="PanelContainer/VBoxContainer"]
+layout_mode = 2
+text = "QUIT"
+
+[connection signal="button_down" from="PanelContainer/VBoxContainer/Continue" to="." method="_on_continue_button_down"]
+[connection signal="button_down" from="PanelContainer/VBoxContainer/Quit" to="." method="_on_quit_button_down"]

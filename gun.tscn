@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://dvpv1yphj24f2"]
+
+[ext_resource type="Script" uid="uid://tpuv7riuxspp" path="res://gun.gd" id="1_dk5gl"]
+[ext_resource type="Texture2D" uid="uid://c51bmw3ewbyob" path="res://gun.png" id="1_vk1bi"]
+
+[node name="Gun" type="Node2D"]
+script = ExtResource("1_dk5gl")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, 12)
+scale = Vector2(0.075, 0.075)
+texture = ExtResource("1_vk1bi")
+flip_h = true
+
+[node name="BulletExit" type="Node2D" parent="."]
+position = Vector2(25, 0)

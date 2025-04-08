@@ -1,0 +1,426 @@
+[gd_scene load_steps=11 format=3 uid="uid://dj7y2bfegoonl"]
+
+[ext_resource type="Script" uid="uid://chqivfjod75of" path="res://main.gd" id="1_fj7yv"]
+[ext_resource type="PackedScene" uid="uid://dv35wpcscd2og" path="res://player.tscn" id="2_tlwt5"]
+[ext_resource type="PackedScene" uid="uid://c1e3qd6me8dg6" path="res://block.tscn" id="3_aqk2v"]
+[ext_resource type="PackedScene" uid="uid://dvo53wr5klck5" path="res://pause_menu.tscn" id="3_tlwt5"]
+[ext_resource type="PackedScene" uid="uid://bxd82jpgvn2r8" path="res://button.tscn" id="5_036b0"]
+[ext_resource type="PackedScene" uid="uid://b2yblv6fys7ej" path="res://door.tscn" id="6_dwbse"]
+[ext_resource type="Script" uid="uid://cufbab7xe1hr" path="res://door.gd" id="7_pkg7o"]
+[ext_resource type="Script" uid="uid://560j72joamjv" path="res://door2.gd" id="8_ioo17"]
+[ext_resource type="Script" uid="uid://cmrejqu8repqi" path="res://door3.gd" id="9_wse8f"]
+[ext_resource type="Script" uid="uid://cbwhxi22iidma" path="res://door4.gd" id="10_wse8f"]
+
+[node name="World" type="Node2D"]
+script = ExtResource("1_fj7yv")
+
+[node name="Player" parent="." instance=ExtResource("2_tlwt5")]
+position = Vector2(632, 248)
+
+[node name="Blocks" type="Node2D" parent="."]
+
+[node name="Block" parent="Blocks" instance=ExtResource("3_aqk2v")]
+position = Vector2(64, 584)
+
+[node name="Block2" parent="Blocks" instance=ExtResource("3_aqk2v")]
+position = Vector2(64, 264)
+
+[node name="Block93" parent="Blocks" instance=ExtResource("3_aqk2v")]
+position = Vector2(448, 264)
+
+[node name="Block96" parent="Blocks" instance=ExtResource("3_aqk2v")]
+position = Vector2(448, 424)
+scale = Vector2(1, 1.5)
+
+[node name="Block118" parent="Blocks" instance=ExtResource("3_aqk2v")]
+position = Vector2(64, -664)
+scale = Vector2(1, 1.5)
+
+[node name="Block94" parent="Blocks" instance=ExtResource("3_aqk2v")]
+position = Vector2(448, 136)
+
+[node name="Block95" parent="Blocks" instance=ExtResource("3_aqk2v")]
+position = Vector2(448, 8)
+
+[node name="Block3" parent="Blocks" instance=ExtResource("3_aqk2v")]
+position = Vector2(64, 136)
+
+[node name="Block4" parent="Blocks" instance=ExtResource("3_aqk2v")]
+position = Vector2(1088, 584)
+
+[node name="Block5" parent="Blocks" instance=ExtResource("3_aqk2v")]
+position = Vector2(960, 584)
+
+[node name="Block6" parent="Blocks" instance=ExtResource("3_aqk2v")]
+position = Vector2(832, 584)
+
+[node name="Block7" parent="Blocks" instance=ExtResource("3_aqk2v")]
+position = Vector2(704, 584)
+
+[node name="Block8" parent="Blocks" instance=ExtResource("3_aqk2v")]
+position = Vector2(576, 584)
+
+[node name="Block9" parent="Blocks" instance=ExtResource("3_aqk2v")]
+position = Vector2(448, 584)
+
+[node name="Block10" parent="Blocks" instance=ExtResource("3_aqk2v")]
+position = Vector2(320, 584)
+
+[node name="Block97" parent="Blocks" instance=ExtResource("3_aqk2v")]
+position = Vector2(576, 8)
+
+[node name="Block11" parent="Blocks" instance=ExtResource("3_aqk2v")]
+position = Vector2(192, 584)
+
+[node name="Block12" parent="Blocks" instance=ExtResource("3_aqk2v")]
+position = Vector2(1088, 264)
+
+[node name="Block13" parent="Blocks" instance=ExtResource("3_aqk2v")]
+position = Vector2(1088, 136)
+
+[node name="Block14" parent="Blocks" instance=ExtResource("3_aqk2v")]
+position = Vector2(1088, 8)
+
+[node name="Block15" parent="Blocks" instance=ExtResource("3_aqk2v")]
+position = Vector2(960, 8)
+
+[node name="Block16" parent="Blocks" instance=ExtResource("3_aqk2v")]
+position = Vector2(831, 8)
+
+[node name="Block17" parent="Blocks" instance=ExtResource("3_aqk2v")]
+position = Vector2(704, 8)
+
+[node name="Block18" parent="Blocks" instance=ExtResource("3_aqk2v")]
+position = Vector2(64, 8)
+
+[node name="Block98" parent="Blocks" instance=ExtResource("3_aqk2v")]
+position = Vector2(64, -120)
+
+[node name="Block99" parent="Blocks" instance=ExtResource("3_aqk2v")]
+position = Vector2(64, -248)
+
+[node name="Block100" parent="Blocks" instance=ExtResource("3_aqk2v")]
+position = Vector2(64, -376)
+
+[node name="Block101" parent="Blocks" instance=ExtResource("3_aqk2v")]
+position = Vector2(64, -504)
+
+[node name="Block19" parent="Blocks" instance=ExtResource("3_aqk2v")]
+position = Vector2(1216, 584)
+
+[node name="Block20" parent="Blocks" instance=ExtResource("3_aqk2v")]
+position = Vector2(2240, 584)
+
+[node name="Block21" parent="Blocks" instance=ExtResource("3_aqk2v")]
+position = Vector2(2112, 584)
+
+[node name="Block22" parent="Blocks" instance=ExtResource("3_aqk2v")]
+position = Vector2(1984, 584)
+
+[node name="Block23" parent="Blocks" instance=ExtResource("3_aqk2v")]
+position = Vector2(1856, 584)
+
+[node name="Block24" parent="Blocks" instance=ExtResource("3_aqk2v")]
+position = Vector2(1728, 584)
+
+[node name="Block25" parent="Blocks" instance=ExtResource("3_aqk2v")]
+position = Vector2(1600, 584)
+
+[node name="Block26" parent="Blocks" instance=ExtResource("3_aqk2v")]
+position = Vector2(1472, 584)
+
+[node name="Block27" parent="Blocks" instance=ExtResource("3_aqk2v")]
+position = Vector2(1344, 584)
+
+[node name="Block28" parent="Blocks" instance=ExtResource("3_aqk2v")]
+position = Vector2(2240, 264)
+
+[node name="Block29" parent="Blocks" instance=ExtResource("3_aqk2v")]
+position = Vector2(2240, 136)
+
+[node name="Block30" parent="Blocks" instance=ExtResource("3_aqk2v")]
+position = Vector2(2240, 8)
+
+[node name="Block31" parent="Blocks" instance=ExtResource("3_aqk2v")]
+position = Vector2(1728, -376)
+
+[node name="Block32" parent="Blocks" instance=ExtResource("3_aqk2v")]
+position = Vector2(1600, -376)
+
+[node name="Block33" parent="Blocks" instance=ExtResource("3_aqk2v")]
+position = Vector2(1472, -376)
+
+[node name="Block34" parent="Blocks" instance=ExtResource("3_aqk2v")]
+position = Vector2(1344, -376)
+
+[node name="Block35" parent="Blocks" instance=ExtResource("3_aqk2v")]
+position = Vector2(1216, -376)
+
+[node name="Block36" parent="Blocks" instance=ExtResource("3_aqk2v")]
+position = Vector2(1088, -376)
+
+[node name="Block37" parent="Blocks" instance=ExtResource("3_aqk2v")]
+position = Vector2(1088, -248)
+
+[node name="Block38" parent="Blocks" instance=ExtResource("3_aqk2v")]
+position = Vector2(1088, -120)
+
+[node name="Block39" parent="Blocks" instance=ExtResource("3_aqk2v")]
+position = Vector2(1856, -376)
+
+[node name="Block40" parent="Blocks" instance=ExtResource("3_aqk2v")]
+position = Vector2(1984, -376)
+
+[node name="Block41" parent="Blocks" instance=ExtResource("3_aqk2v")]
+position = Vector2(2112, -376)
+
+[node name="Block42" parent="Blocks" instance=ExtResource("3_aqk2v")]
+position = Vector2(2240, -376)
+
+[node name="Block43" parent="Blocks" instance=ExtResource("3_aqk2v")]
+position = Vector2(2240, -248)
+
+[node name="Block44" parent="Blocks" instance=ExtResource("3_aqk2v")]
+position = Vector2(2240, -120)
+
+[node name="Block45" parent="Blocks" instance=ExtResource("3_aqk2v")]
+position = Vector2(2368, 584)
+
+[node name="Block46" parent="Blocks" instance=ExtResource("3_aqk2v")]
+position = Vector2(2496, 584)
+
+[node name="Block47" parent="Blocks" instance=ExtResource("3_aqk2v")]
+position = Vector2(2624, 584)
+
+[node name="Block48" parent="Blocks" instance=ExtResource("3_aqk2v")]
+position = Vector2(2752, 584)
+
+[node name="Block49" parent="Blocks" instance=ExtResource("3_aqk2v")]
+position = Vector2(2880, 584)
+
+[node name="Block50" parent="Blocks" instance=ExtResource("3_aqk2v")]
+position = Vector2(3008, 584)
+
+[node name="Block51" parent="Blocks" instance=ExtResource("3_aqk2v")]
+position = Vector2(3136, 584)
+
+[node name="Block52" parent="Blocks" instance=ExtResource("3_aqk2v")]
+position = Vector2(3392, 456)
+
+[node name="Block57" parent="Blocks" instance=ExtResource("3_aqk2v")]
+position = Vector2(3264, 585)
+
+[node name="Block58" parent="Blocks" instance=ExtResource("3_aqk2v")]
+position = Vector2(3392, 585)
+
+[node name="Block53" parent="Blocks" instance=ExtResource("3_aqk2v")]
+position = Vector2(3392, 328)
+
+[node name="Block54" parent="Blocks" instance=ExtResource("3_aqk2v")]
+position = Vector2(3392, 200)
+
+[node name="Block55" parent="Blocks" instance=ExtResource("3_aqk2v")]
+position = Vector2(3392, 72)
+
+[node name="Block56" parent="Blocks" instance=ExtResource("3_aqk2v")]
+position = Vector2(3392, -56)
+
+[node name="Block59" parent="Blocks" instance=ExtResource("3_aqk2v")]
+position = Vector2(2624, 456)
+
+[node name="Block60" parent="Blocks" instance=ExtResource("3_aqk2v")]
+position = Vector2(2624, 328)
+
+[node name="Block61" parent="Blocks" instance=ExtResource("3_aqk2v")]
+position = Vector2(2624, 200)
+
+[node name="Block62" parent="Blocks" instance=ExtResource("3_aqk2v")]
+position = Vector2(2624, 72)
+
+[node name="Block63" parent="Blocks" instance=ExtResource("3_aqk2v")]
+position = Vector2(2624, -56)
+
+[node name="Block64" parent="Blocks" instance=ExtResource("3_aqk2v")]
+position = Vector2(3008, 200)
+
+[node name="Block65" parent="Blocks" instance=ExtResource("3_aqk2v")]
+position = Vector2(3008, 72)
+
+[node name="Block66" parent="Blocks" instance=ExtResource("3_aqk2v")]
+position = Vector2(3008, -56)
+
+[node name="Block67" parent="Blocks" instance=ExtResource("3_aqk2v")]
+position = Vector2(3008, -184)
+
+[node name="Block68" parent="Blocks" instance=ExtResource("3_aqk2v")]
+position = Vector2(3008, -312)
+
+[node name="Block69" parent="Blocks" instance=ExtResource("3_aqk2v")]
+position = Vector2(3008, -440)
+
+[node name="Block70" parent="Blocks" instance=ExtResource("3_aqk2v")]
+position = Vector2(3008, -568)
+
+[node name="Block71" parent="Blocks" instance=ExtResource("3_aqk2v")]
+position = Vector2(2624, -184)
+
+[node name="Block72" parent="Blocks" instance=ExtResource("3_aqk2v")]
+position = Vector2(2624, -312)
+
+[node name="Block73" parent="Blocks" instance=ExtResource("3_aqk2v")]
+position = Vector2(3392, -184)
+
+[node name="Block74" parent="Blocks" instance=ExtResource("3_aqk2v")]
+position = Vector2(3392, -312)
+
+[node name="Block75" parent="Blocks" instance=ExtResource("3_aqk2v")]
+position = Vector2(2240, -696)
+
+[node name="Block102" parent="Blocks" instance=ExtResource("3_aqk2v")]
+position = Vector2(2112, -696)
+
+[node name="Block103" parent="Blocks" instance=ExtResource("3_aqk2v")]
+position = Vector2(1984, -696)
+
+[node name="Block104" parent="Blocks" instance=ExtResource("3_aqk2v")]
+position = Vector2(1856, -696)
+
+[node name="Block105" parent="Blocks" instance=ExtResource("3_aqk2v")]
+position = Vector2(1728, -696)
+
+[node name="Block106" parent="Blocks" instance=ExtResource("3_aqk2v")]
+position = Vector2(1600, -696)
+
+[node name="Block107" parent="Blocks" instance=ExtResource("3_aqk2v")]
+position = Vector2(1472, -696)
+
+[node name="Block108" parent="Blocks" instance=ExtResource("3_aqk2v")]
+position = Vector2(1344, -696)
+
+[node name="Block109" parent="Blocks" instance=ExtResource("3_aqk2v")]
+position = Vector2(1216, -696)
+
+[node name="Block110" parent="Blocks" instance=ExtResource("3_aqk2v")]
+position = Vector2(1088, -696)
+
+[node name="Block111" parent="Blocks" instance=ExtResource("3_aqk2v")]
+position = Vector2(960, -696)
+
+[node name="Block112" parent="Blocks" instance=ExtResource("3_aqk2v")]
+position = Vector2(832, -696)
+
+[node name="Block113" parent="Blocks" instance=ExtResource("3_aqk2v")]
+position = Vector2(704, -696)
+
+[node name="Block114" parent="Blocks" instance=ExtResource("3_aqk2v")]
+position = Vector2(576, -696)
+
+[node name="Block115" parent="Blocks" instance=ExtResource("3_aqk2v")]
+position = Vector2(448, -696)
+
+[node name="Block116" parent="Blocks" instance=ExtResource("3_aqk2v")]
+position = Vector2(320, -696)
+
+[node name="Block117" parent="Blocks" instance=ExtResource("3_aqk2v")]
+position = Vector2(192, -696)
+
+[node name="Block76" parent="Blocks" instance=ExtResource("3_aqk2v")]
+position = Vector2(2368, -696)
+
+[node name="Block77" parent="Blocks" instance=ExtResource("3_aqk2v")]
+position = Vector2(2496, -696)
+
+[node name="Block78" parent="Blocks" instance=ExtResource("3_aqk2v")]
+position = Vector2(2624, -696)
+
+[node name="Block79" parent="Blocks" instance=ExtResource("3_aqk2v")]
+position = Vector2(2752, -696)
+
+[node name="Block80" parent="Blocks" instance=ExtResource("3_aqk2v")]
+position = Vector2(3008, -696)
+
+[node name="Block91" parent="Blocks" instance=ExtResource("3_aqk2v")]
+position = Vector2(2880, -696)
+
+[node name="Block81" parent="Blocks" instance=ExtResource("3_aqk2v")]
+position = Vector2(3136, -696)
+
+[node name="Block82" parent="Blocks" instance=ExtResource("3_aqk2v")]
+position = Vector2(3264, -696)
+
+[node name="Block83" parent="Blocks" instance=ExtResource("3_aqk2v")]
+position = Vector2(3392, -696)
+
+[node name="Block84" parent="Blocks" instance=ExtResource("3_aqk2v")]
+position = Vector2(3520, -696)
+
+[node name="Block85" parent="Blocks" instance=ExtResource("3_aqk2v")]
+position = Vector2(3648, -696)
+
+[node name="Block92" parent="Blocks" instance=ExtResource("3_aqk2v")]
+position = Vector2(3776, -696)
+
+[node name="Block86" parent="Blocks" instance=ExtResource("3_aqk2v")]
+position = Vector2(3776, -568)
+
+[node name="Block87" parent="Blocks" instance=ExtResource("3_aqk2v")]
+position = Vector2(3776, -440)
+
+[node name="Block88" parent="Blocks" instance=ExtResource("3_aqk2v")]
+position = Vector2(3776, -312)
+
+[node name="Block89" parent="Blocks" instance=ExtResource("3_aqk2v")]
+position = Vector2(3648, -312)
+
+[node name="Block90" parent="Blocks" instance=ExtResource("3_aqk2v")]
+position = Vector2(3520, -312)
+
+[node name="Buttons" type="Node2D" parent="."]
+
+[node name="Button" parent="Buttons" instance=ExtResource("5_036b0")]
+position = Vector2(832, 504)
+scale = Vector2(6, 6)
+
+[node name="Button2" parent="Buttons" instance=ExtResource("5_036b0")]
+position = Vector2(151, 504)
+scale = Vector2(6, 6)
+
+[node name="Button3" parent="Buttons" instance=ExtResource("5_036b0")]
+position = Vector2(1168, -248)
+rotation = 1.5708
+scale = Vector2(6, 6)
+
+[node name="Button4" parent="Buttons" instance=ExtResource("5_036b0")]
+position = Vector2(3696, -504)
+rotation = -1.5708
+scale = Vector2(6, 6)
+
+[node name="Doors" type="Node2D" parent="."]
+
+[node name="Door" parent="Doors" instance=ExtResource("6_dwbse")]
+position = Vector2(1088, 456)
+script = ExtResource("7_pkg7o")
+
+[node name="Door2" parent="Doors" instance=ExtResource("6_dwbse")]
+position = Vector2(32, 456)
+script = ExtResource("8_ioo17")
+
+[node name="Door3" parent="Doors" instance=ExtResource("6_dwbse")]
+position = Vector2(2240, 456)
+script = ExtResource("9_wse8f")
+
+[node name="Door4" parent="Doors" instance=ExtResource("6_dwbse")]
+position = Vector2(2208, -504)
+script = ExtResource("10_wse8f")
+
+[node name="PauseMenu" parent="." instance=ExtResource("3_tlwt5")]
+visible = false
+offset_left = 216.0
+offset_top = -80.0
+offset_right = 216.0
+offset_bottom = -80.0
+
+[connection signal="area_entered" from="Buttons/Button" to="Doors/Door" method="_on_button_area_entered"]
+[connection signal="area_entered" from="Buttons/Button2" to="Doors/Door2" method="_on_button_2_area_entered"]
+[connection signal="area_entered" from="Buttons/Button3" to="Doors/Door3" method="_on_button_3_area_entered"]
+[connection signal="area_entered" from="Buttons/Button4" to="Doors/Door4" method="_on_button_4_area_entered"]
