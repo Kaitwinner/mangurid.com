@@ -1,15 +1,24 @@
-[gd_scene load_steps=7 format=3 uid="uid://dj7y2bfegoonl"]
+[gd_scene load_steps=8 format=3 uid="uid://dj7y2bfegoonl"]
 
-[ext_resource type="Script" uid="uid://chqivfjod75of" path="res://main.gd" id="1_fj7yv"]
 [ext_resource type="PackedScene" uid="uid://dv35wpcscd2og" path="res://player.tscn" id="2_tlwt5"]
 [ext_resource type="PackedScene" uid="uid://c1e3qd6me8dg6" path="res://block.tscn" id="3_aqk2v"]
 [ext_resource type="PackedScene" uid="uid://bxd82jpgvn2r8" path="res://button.tscn" id="5_036b0"]
 [ext_resource type="PackedScene" uid="uid://c4joumvxbn80" path="res://door.tscn" id="6_dwbse"]
+<<<<<<< Updated upstream
 [ext_resource type="PackedScene" uid="uid://cdhxkntegonak" path="res://portal.tscn" id="6_pkg7o"]
 
 [node name="World" type="Node2D"]
 script = ExtResource("1_fj7yv")
 metadata/_edit_vertical_guides_ = [-2816.0]
+=======
+[ext_resource type="PackedScene" path="res://portal.tscn" id="6_pkg7o"]
+[ext_resource type="PackedScene" uid="uid://dvo53wr5klck5" path="res://pause_menu.tscn" id="7_pkg7o"]
+
+[sub_resource type="GDScript" id="GDScript_dwbse"]
+
+[node name="World" type="Node2D"]
+script = SubResource("GDScript_dwbse")
+>>>>>>> Stashed changes
 
 [node name="Player" parent="." instance=ExtResource("2_tlwt5")]
 position = Vector2(632, 248)
@@ -429,6 +438,10 @@ scale = Vector2(5, 5)
 
 [node name="Destination" parent="Portals/Portal" index="3"]
 position = Vector2(-97.8, -282)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="PauseMenu" parent="CanvasLayer" instance=ExtResource("7_pkg7o")]
 
 [editable path="Portals/Portal2"]
 [editable path="Portals/Portal"]

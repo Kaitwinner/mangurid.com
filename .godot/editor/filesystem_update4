@@ -3,6 +3,11 @@ res://door.tscn
 res://world.tscn
 res://button.tscn
 res://player.tscn
-res://portal.gd
+res://pause_menu.tscn
+res://pause_menu.gd
+res://button.gd
+res://door.gd
+res://main.gd
 res://player.gd
+res://portal.gd
 res://gun.tscn

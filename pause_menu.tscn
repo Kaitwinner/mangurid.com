@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://dvo53wr5klck5"]
 
-[ext_resource type="Script" uid="uid://dj5pwpwpvqkgj" path="res://pause_menu.gd" id="1_nwcfo"]
+[ext_resource type="Script" uid="uid://ce0kp30i6txiq" path="res://pause_menu.gd" id="1_nwcfo"]
 [ext_resource type="Shader" uid="uid://ddath2el1smtm" path="res://shader.gdshader" id="2_05uyy"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_p81d2"]
@@ -44,5 +44,5 @@ text = "CONTINUE"
 layout_mode = 2
 text = "QUIT"
 
-[connection signal="button_down" from="PanelContainer/VBoxContainer/Continue" to="." method="_on_continue_button_down"]
-[connection signal="button_down" from="PanelContainer/VBoxContainer/Quit" to="." method="_on_quit_button_down"]
+[connection signal="pressed" from="PanelContainer/VBoxContainer/Continue" to="." method="_on_continue_pressed"]
+[connection signal="pressed" from="PanelContainer/VBoxContainer/Quit" to="." method="_on_quit_pressed"]
