@@ -1,15 +1,10 @@
-[gd_scene load_steps=11 format=3 uid="uid://dj7y2bfegoonl"]
+[gd_scene load_steps=6 format=3 uid="uid://dj7y2bfegoonl"]
 
 [ext_resource type="Script" uid="uid://chqivfjod75of" path="res://main.gd" id="1_fj7yv"]
 [ext_resource type="PackedScene" uid="uid://dv35wpcscd2og" path="res://player.tscn" id="2_tlwt5"]
 [ext_resource type="PackedScene" uid="uid://c1e3qd6me8dg6" path="res://block.tscn" id="3_aqk2v"]
-[ext_resource type="PackedScene" uid="uid://dvo53wr5klck5" path="res://pause_menu.tscn" id="3_tlwt5"]
 [ext_resource type="PackedScene" uid="uid://bxd82jpgvn2r8" path="res://button.tscn" id="5_036b0"]
-[ext_resource type="PackedScene" uid="uid://b2yblv6fys7ej" path="res://door.tscn" id="6_dwbse"]
-[ext_resource type="Script" uid="uid://cufbab7xe1hr" path="res://door.gd" id="7_pkg7o"]
-[ext_resource type="Script" uid="uid://560j72joamjv" path="res://door2.gd" id="8_ioo17"]
-[ext_resource type="Script" uid="uid://cmrejqu8repqi" path="res://door3.gd" id="9_wse8f"]
-[ext_resource type="Script" uid="uid://cbwhxi22iidma" path="res://door4.gd" id="10_wse8f"]
+[ext_resource type="PackedScene" uid="uid://c4joumvxbn80" path="res://door.tscn" id="6_dwbse"]
 
 [node name="World" type="Node2D"]
 script = ExtResource("1_fj7yv")
@@ -377,50 +372,42 @@ position = Vector2(3520, -312)
 
 [node name="Buttons" type="Node2D" parent="."]
 
-[node name="Button" parent="Buttons" instance=ExtResource("5_036b0")]
+[node name="Button" parent="Buttons" node_paths=PackedStringArray("door") instance=ExtResource("5_036b0")]
 position = Vector2(832, 504)
 scale = Vector2(6, 6)
+door = NodePath("../../Doors/Door3")
 
-[node name="Button2" parent="Buttons" instance=ExtResource("5_036b0")]
+[node name="Button2" parent="Buttons" node_paths=PackedStringArray("door") instance=ExtResource("5_036b0")]
 position = Vector2(151, 504)
 scale = Vector2(6, 6)
+door = NodePath("../../Doors/Door2")
 
-[node name="Button3" parent="Buttons" instance=ExtResource("5_036b0")]
+[node name="Button3" parent="Buttons" node_paths=PackedStringArray("door") instance=ExtResource("5_036b0")]
 position = Vector2(1168, -248)
 rotation = 1.5708
 scale = Vector2(6, 6)
+door = NodePath("../../Doors/Door4")
 
-[node name="Button4" parent="Buttons" instance=ExtResource("5_036b0")]
+[node name="Button4" parent="Buttons" node_paths=PackedStringArray("door") instance=ExtResource("5_036b0")]
 position = Vector2(3696, -504)
 rotation = -1.5708
 scale = Vector2(6, 6)
+door = NodePath("../../Doors/Door")
 
 [node name="Doors" type="Node2D" parent="."]
 
 [node name="Door" parent="Doors" instance=ExtResource("6_dwbse")]
-position = Vector2(1088, 456)
-script = ExtResource("7_pkg7o")
+position = Vector2(-3.00003, 423)
+scale = Vector2(9.265, 9.265)
 
 [node name="Door2" parent="Doors" instance=ExtResource("6_dwbse")]
-position = Vector2(32, 456)
-script = ExtResource("8_ioo17")
+position = Vector2(3058, 393)
+scale = Vector2(12.115, 12.115)
 
 [node name="Door3" parent="Doors" instance=ExtResource("6_dwbse")]
-position = Vector2(2240, 456)
-script = ExtResource("9_wse8f")
+position = Vector2(1116, 424)
+scale = Vector2(9.175, 9.175)
 
 [node name="Door4" parent="Doors" instance=ExtResource("6_dwbse")]
-position = Vector2(2208, -504)
-script = ExtResource("10_wse8f")
-
-[node name="PauseMenu" parent="." instance=ExtResource("3_tlwt5")]
-visible = false
-offset_left = 216.0
-offset_top = -80.0
-offset_right = 216.0
-offset_bottom = -80.0
-
-[connection signal="area_entered" from="Buttons/Button" to="Doors/Door" method="_on_button_area_entered"]
-[connection signal="area_entered" from="Buttons/Button2" to="Doors/Door2" method="_on_button_2_area_entered"]
-[connection signal="area_entered" from="Buttons/Button3" to="Doors/Door3" method="_on_button_3_area_entered"]
-[connection signal="area_entered" from="Buttons/Button4" to="Doors/Door4" method="_on_button_4_area_entered"]
+position = Vector2(2269, 425)
+scale = Vector2(9.3, 9.3)

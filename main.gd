@@ -7,7 +7,6 @@ func _unhandled_input(event):
 		toggle_pause()
 		get_viewport().set_input_as_handled()
 
-
 func toggle_pause():
 	is_paused = !is_paused
 	get_tree().paused = is_paused
