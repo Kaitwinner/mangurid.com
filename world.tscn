@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://dj7y2bfegoonl"]
+[gd_scene load_steps=7 format=3 uid="uid://dj7y2bfegoonl"]
 
 [ext_resource type="Script" uid="uid://chqivfjod75of" path="res://main.gd" id="1_fj7yv"]
 [ext_resource type="PackedScene" uid="uid://dv35wpcscd2og" path="res://player.tscn" id="2_tlwt5"]
 [ext_resource type="PackedScene" uid="uid://c1e3qd6me8dg6" path="res://block.tscn" id="3_aqk2v"]
 [ext_resource type="PackedScene" uid="uid://bxd82jpgvn2r8" path="res://button.tscn" id="5_036b0"]
 [ext_resource type="PackedScene" uid="uid://c4joumvxbn80" path="res://door.tscn" id="6_dwbse"]
+[ext_resource type="PackedScene" path="res://portal.tscn" id="6_pkg7o"]
 
 [node name="World" type="Node2D"]
 script = ExtResource("1_fj7yv")
@@ -378,7 +379,7 @@ scale = Vector2(6, 6)
 door = NodePath("../../Doors/Door3")
 
 [node name="Button2" parent="Buttons" node_paths=PackedStringArray("door") instance=ExtResource("5_036b0")]
-position = Vector2(151, 504)
+position = Vector2(336, 504)
 scale = Vector2(6, 6)
 door = NodePath("../../Doors/Door2")
 
@@ -397,17 +398,36 @@ door = NodePath("../../Doors/Door")
 [node name="Doors" type="Node2D" parent="."]
 
 [node name="Door" parent="Doors" instance=ExtResource("6_dwbse")]
-position = Vector2(-3.00003, 423)
-scale = Vector2(9.265, 9.265)
+position = Vector2(64, 425)
+scale = Vector2(6.4, 9.5)
 
 [node name="Door2" parent="Doors" instance=ExtResource("6_dwbse")]
-position = Vector2(3058, 393)
-scale = Vector2(12.115, 12.115)
+position = Vector2(3008, 392)
+scale = Vector2(6.4, 13)
 
 [node name="Door3" parent="Doors" instance=ExtResource("6_dwbse")]
-position = Vector2(1116, 424)
-scale = Vector2(9.175, 9.175)
+position = Vector2(1088, 424)
+scale = Vector2(6.4, 9.5)
 
 [node name="Door4" parent="Doors" instance=ExtResource("6_dwbse")]
-position = Vector2(2269, 425)
-scale = Vector2(9.3, 9.3)
+position = Vector2(2240, 425)
+scale = Vector2(6.4, 9.5)
+
+[node name="Portals" type="Node2D" parent="."]
+
+[node name="Portal2" parent="Portals" instance=ExtResource("6_pkg7o")]
+position = Vector2(1863, -966)
+scale = Vector2(5, 5)
+
+[node name="Destination" parent="Portals/Portal2" index="3"]
+position = Vector2(-85.4, 183.6)
+
+[node name="Portal" parent="Portals" instance=ExtResource("6_pkg7o")]
+position = Vector2(1706, 401)
+scale = Vector2(5, 5)
+
+[node name="Destination" parent="Portals/Portal" index="3"]
+position = Vector2(-97.8, -282)
+
+[editable path="Portals/Portal2"]
+[editable path="Portals/Portal"]

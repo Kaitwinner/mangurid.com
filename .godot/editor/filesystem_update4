@@ -1,6 +1,5 @@
-res://door.tscn
-res://door.gd
 res://main_menu.tscn
-res://button.gd
+res://door.tscn
 res://world.tscn
 res://button.tscn
+res://player.tscn
