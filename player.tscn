@@ -24,10 +24,9 @@ shape = SubResource("RectangleShape2D_0rwas")
 scale = Vector2(6.4, 6.4)
 shape = SubResource("RectangleShape2D_xhfnw")
 
-[node name="GunPos" type="Node2D" parent="."]
-
-[node name="Gun" parent="GunPos" instance=ExtResource("3_i3pqv")]
-
 [node name="Camera2D" type="Camera2D" parent="."]
 position_smoothing_enabled = true
 position_smoothing_speed = 4.0
+
+[node name="Gun" parent="." instance=ExtResource("3_i3pqv")]
+position = Vector2(74, 0)

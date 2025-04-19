@@ -5,10 +5,11 @@
 [ext_resource type="PackedScene" uid="uid://c1e3qd6me8dg6" path="res://block.tscn" id="3_aqk2v"]
 [ext_resource type="PackedScene" uid="uid://bxd82jpgvn2r8" path="res://button.tscn" id="5_036b0"]
 [ext_resource type="PackedScene" uid="uid://c4joumvxbn80" path="res://door.tscn" id="6_dwbse"]
-[ext_resource type="PackedScene" path="res://portal.tscn" id="6_pkg7o"]
+[ext_resource type="PackedScene" uid="uid://cdhxkntegonak" path="res://portal.tscn" id="6_pkg7o"]
 
 [node name="World" type="Node2D"]
 script = ExtResource("1_fj7yv")
+metadata/_edit_vertical_guides_ = [-2816.0]
 
 [node name="Player" parent="." instance=ExtResource("2_tlwt5")]
 position = Vector2(632, 248)
